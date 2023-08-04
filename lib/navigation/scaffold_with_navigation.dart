@@ -37,15 +37,26 @@ class _ScaffoldWithNavigationRail extends StatelessWidget {
     final colorScheme = theme.colorScheme;
     return Scaffold(
       appBar: AppBar(
-        title: const Text('アイコン'),
+        title: Text(
+          'Flutter Admin Dashboard',
+          style: theme.textTheme.bodyLarge!.copyWith(
+            fontWeight: FontWeight.w700,
+          ),
+        ),
         centerTitle: false,
         elevation: 1,
         actions: [
           IconButton(
+            icon: const Icon(Icons.mode_night),
+            onPressed: () {
+              // TODO(tsuruoka): モード切り替え
+            },
+          ),
+          IconButton(
+            icon: const Icon(Icons.settings),
             onPressed: () {
               // TODO(tsuruoka): なにかしらのアクション
             },
-            icon: const Icon(Icons.settings),
           ),
         ],
       ),
