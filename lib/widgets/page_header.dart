@@ -15,7 +15,7 @@ class PageHeader extends StatelessWidget {
         Text(
           title,
           style: theme.textTheme.headlineMedium!.copyWith(
-            fontWeight: FontWeight.bold,
+            fontWeight: FontWeight.w700,
           ),
         ),
         // TODO(tsuruoka): 適切な表示にかえる

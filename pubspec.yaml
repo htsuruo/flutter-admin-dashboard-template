@@ -14,6 +14,7 @@ dependencies:
     sdk: flutter
   gap:
   go_router:
+  google_fonts:
   intersperse:
   recase:
   simple_logger:
