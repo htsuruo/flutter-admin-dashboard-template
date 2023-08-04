@@ -52,7 +52,7 @@ class _ScaffoldWithNavigationRail extends StatelessWidget {
       body: Row(
         children: [
           NavigationRail(
-            extended: true,
+            // extended: true,
             selectedIndex: navigationShell.currentIndex,
             unselectedLabelTextStyle: theme.textTheme.bodyMedium,
             selectedLabelTextStyle: theme.textTheme.bodyMedium!.copyWith(

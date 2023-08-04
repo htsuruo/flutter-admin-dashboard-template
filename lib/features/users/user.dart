@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../../widgets/widgets.dart';
+
 class UserPage extends StatelessWidget {
   const UserPage({super.key, required this.userId});
 
@@ -7,10 +9,6 @@ class UserPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text('User'),
-      ),
-    );
+    return const PageHeader(title: 'Users');
   }
 }
