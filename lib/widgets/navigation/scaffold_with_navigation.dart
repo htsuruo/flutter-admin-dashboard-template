@@ -14,15 +14,17 @@ class ScaffoldWithNavigation extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return LayoutBuilder(
-      builder: (context, constraints) {
-        switch (constraints.maxWidth) {
-          case < 450:
-            return _ScaffoldWithNavigationBar(navigationShell);
-          default:
-            return _ScaffoldWithNavigationRail(navigationShell);
-        }
-      },
+    return SelectionArea(
+      child: LayoutBuilder(
+        builder: (context, constraints) {
+          switch (constraints.maxWidth) {
+            case < 450:
+              return _ScaffoldWithNavigationBar(navigationShell);
+            default:
+              return _ScaffoldWithNavigationRail(navigationShell);
+          }
+        },
+      ),
     );
   }
 }
