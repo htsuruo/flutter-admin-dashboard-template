@@ -65,13 +65,31 @@ class _ScaffoldWithDrawer extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final theme = Theme.of(context);
     return Scaffold(
       appBar: const NavigationAppBar(),
       body: navigationShell,
       drawer: Drawer(
-        child: _NavigationRail(
-          navigationShell: navigationShell,
-          expand: true,
+        child: Column(
+          children: [
+            DrawerHeader(
+              decoration: const BoxDecoration(border: Border()),
+              margin: EdgeInsets.zero,
+              child: Center(
+                child: Text(
+                  'Drawer Header',
+                  style: theme.textTheme.bodyMedium!
+                      .copyWith(fontWeight: FontWeight.w600),
+                ),
+              ),
+            ),
+            Expanded(
+              child: _NavigationRail(
+                navigationShell: navigationShell,
+                expand: true,
+              ),
+            ),
+          ],
         ),
       ),
     );
