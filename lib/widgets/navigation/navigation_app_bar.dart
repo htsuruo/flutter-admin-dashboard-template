@@ -11,7 +11,7 @@ class NavigationAppBar extends StatelessWidget implements PreferredSizeWidget {
     return AppBar(
       title: const NavigationTitle(),
       centerTitle: false,
-      elevation: 1,
+      elevation: 4,
       actions: [
         const Text('htsuruo'),
         Padding(
