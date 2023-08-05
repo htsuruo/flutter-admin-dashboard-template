@@ -5,7 +5,7 @@ import 'package:go_router/go_router.dart';
 import 'features/dashboard/dashbord_page.dart';
 import 'features/users/user.dart';
 import 'features/users/users.dart';
-import 'navigation/scaffold_with_navigation.dart';
+import 'widgets/widgets.dart';
 
 part 'router.g.dart';
 

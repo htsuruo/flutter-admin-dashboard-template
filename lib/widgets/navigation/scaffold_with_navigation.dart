@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_admin_dashboard_template/navigation/navigation_app_bar.dart';
 import 'package:go_router/go_router.dart';
 
+import 'navigation_app_bar.dart';
 import 'navigation_item.dart';
 
 class ScaffoldWithNavigation extends StatelessWidget {

@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_admin_dashboard_template/router.dart';
 import 'package:go_router/go_router.dart';
-
-import '../router.dart';
 
 class NavigationTitle extends StatelessWidget {
   const NavigationTitle({super.key});
