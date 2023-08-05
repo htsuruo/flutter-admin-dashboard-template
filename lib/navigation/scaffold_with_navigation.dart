@@ -3,6 +3,7 @@ import 'package:flutter_admin_dashboard_template/widgets/widgets.dart';
 import 'package:go_router/go_router.dart';
 
 import 'navigation_item.dart';
+import 'navigation_title.dart';
 
 class ScaffoldWithNavigation extends StatelessWidget {
   const ScaffoldWithNavigation({
@@ -38,12 +39,7 @@ class _ScaffoldWithNavigationRail extends StatelessWidget {
     final colorScheme = theme.colorScheme;
     return Scaffold(
       appBar: AppBar(
-        title: Text(
-          'Flutter Admin Dashboard',
-          style: theme.textTheme.bodyLarge!.copyWith(
-            fontWeight: FontWeight.w700,
-          ),
-        ),
+        title: const NavigationTitle(),
         centerTitle: false,
         elevation: 1,
         actions: [

@@ -9,9 +9,12 @@ import 'navigation/scaffold_with_navigation.dart';
 
 part 'router.g.dart';
 
+const routerInitialLocation = '/';
+
 final router = GoRouter(
   routes: $appRoutes,
   debugLogDiagnostics: kDebugMode,
+  initialLocation: routerInitialLocation,
 );
 
 @TypedStatefulShellRoute<ShellRouteData>(
@@ -19,7 +22,7 @@ final router = GoRouter(
     TypedStatefulShellBranch(
       routes: [
         TypedGoRoute<DashboardRoute>(
-          path: '/',
+          path: routerInitialLocation,
         )
       ],
     ),
