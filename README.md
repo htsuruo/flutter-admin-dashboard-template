@@ -2,7 +2,7 @@
 
 This is an admin dashboard template for Flutter Web.
 
-### **[View Demo](https://flutter-admin-dashboard-d5aeb.web.app/)**
+**[View Demo](https://flutter-admin-dashboard-d5aeb.web.app/)**
 
 ## Features
 
