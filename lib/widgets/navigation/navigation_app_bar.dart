@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:gap/gap.dart';
 
 import 'navigation_title.dart';
-import 'theme_mode_icon_button.dart';
 
 class NavigationAppBar extends StatelessWidget implements PreferredSizeWidget {
   const NavigationAppBar({super.key});
@@ -13,7 +13,8 @@ class NavigationAppBar extends StatelessWidget implements PreferredSizeWidget {
       centerTitle: false,
       elevation: 1,
       actions: [
-        const ThemeModeIconButton(),
+        const Gap(8),
+        const Text('htsuruo'),
         IconButton(
           icon: const Icon(Icons.settings),
           onPressed: () {

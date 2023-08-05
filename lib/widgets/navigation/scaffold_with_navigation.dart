@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_admin_dashboard_template/main.dart';
+import 'package:flutter_admin_dashboard_template/widgets/widgets.dart';
 import 'package:go_router/go_router.dart';
-
-import 'navigation_app_bar.dart';
-import 'navigation_item.dart';
 
 class ScaffoldWithNavigation extends StatelessWidget {
   const ScaffoldWithNavigation({
@@ -19,7 +17,7 @@ class ScaffoldWithNavigation extends StatelessWidget {
       child: LayoutBuilder(
         builder: (context, constraints) {
           switch (constraints.maxWidth) {
-            case < 450:
+            case < 960:
               return _ScaffoldWithDrawer(navigationShell);
             default:
               return _ScaffoldWithNavigationRail(navigationShell);
@@ -43,9 +41,19 @@ class _ScaffoldWithNavigationRail extends StatelessWidget {
       appBar: const NavigationAppBar(),
       body: Row(
         children: [
-          _NavigationRail(
-            navigationShell: navigationShell,
-            expand: false,
+          Column(
+            children: [
+              Expanded(
+                child: _NavigationRail(
+                  navigationShell: navigationShell,
+                  expand: false,
+                ),
+              ),
+              const Padding(
+                padding: EdgeInsets.all(16),
+                child: ThemeModeButton.icon(),
+              ),
+            ],
           ),
           VerticalDivider(
             thickness: 1,
@@ -89,6 +97,10 @@ class _ScaffoldWithDrawer extends StatelessWidget {
                 navigationShell: navigationShell,
                 expand: true,
               ),
+            ),
+            const Padding(
+              padding: EdgeInsets.all(16),
+              child: ThemeModeButton.outlined(),
             ),
           ],
         ),
