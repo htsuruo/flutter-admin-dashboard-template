@@ -1,0 +1,10 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "flutter-admin-dashboard-template",
+      "request": "launch",
+      "type": "dart"
+    }
+  ]
+}
