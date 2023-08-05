@@ -22,12 +22,12 @@ class ThemeModeButton extends StatelessWidget {
     final brightness = Theme.of(context).brightness;
     final (iconData, action, actionLabel) = switch (brightness) {
       Brightness.light => (
-          Icons.dark_mode,
+          Icons.dark_mode_outlined,
           AdaptiveTheme.of(context).setDark,
           'Switch to dark'
         ),
       Brightness.dark => (
-          Icons.light_mode,
+          Icons.light_mode_outlined,
           AdaptiveTheme.of(context).setLight,
           'Switch to light'
         )

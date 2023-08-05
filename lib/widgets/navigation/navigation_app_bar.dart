@@ -16,7 +16,7 @@ class NavigationAppBar extends StatelessWidget implements PreferredSizeWidget {
         const Gap(8),
         const Text('htsuruo'),
         IconButton(
-          icon: const Icon(Icons.settings),
+          icon: const Icon(Icons.account_circle_outlined),
           onPressed: () {
             // TODO(tsuruoka): なにかしらのアクション
           },
