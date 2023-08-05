@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_admin_dashboard_template/widgets/widgets.dart';
+import 'package:flutter_admin_dashboard_template/navigation/navigation_app_bar.dart';
 import 'package:go_router/go_router.dart';
 
 import 'navigation_item.dart';
-import 'navigation_title.dart';
 
 class ScaffoldWithNavigation extends StatelessWidget {
   const ScaffoldWithNavigation({
@@ -38,20 +37,7 @@ class _ScaffoldWithNavigationRail extends StatelessWidget {
     final theme = Theme.of(context);
     final colorScheme = theme.colorScheme;
     return Scaffold(
-      appBar: AppBar(
-        title: const NavigationTitle(),
-        centerTitle: false,
-        elevation: 1,
-        actions: [
-          const ThemeModeIconButton(),
-          IconButton(
-            icon: const Icon(Icons.settings),
-            onPressed: () {
-              // TODO(tsuruoka): なにかしらのアクション
-            },
-          ),
-        ],
-      ),
+      appBar: const NavigationAppBar(),
       body: Row(
         children: [
           NavigationRail(
@@ -95,6 +81,7 @@ class _ScaffoldWithNavigationBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: const NavigationAppBar(),
       body: navigationShell,
       bottomNavigationBar: NavigationBar(
         selectedIndex: navigationShell.currentIndex,
