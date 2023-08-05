@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_admin_dashboard_template/theme.dart';
 import 'package:flutter_web_plugins/url_strategy.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 import 'router.dart';
 
@@ -17,18 +17,9 @@ class MyApp extends StatelessWidget {
     return MaterialApp.router(
       title: 'Flutter Admin Dashboard',
       routerConfig: router,
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-        useMaterial3: true,
-        dividerTheme: const DividerThemeData(space: 0),
-        fontFamily: GoogleFonts.poppins().fontFamily,
-        bottomNavigationBarTheme: const BottomNavigationBarThemeData(
-          selectedLabelStyle: TextStyle(
-            fontWeight: FontWeight.w600,
-            fontSize: 12,
-          ),
-        ),
-      ),
+      themeMode: ThemeMode.dark,
+      theme: AppTheme.light,
+      darkTheme: AppTheme.dark,
     );
   }
 }

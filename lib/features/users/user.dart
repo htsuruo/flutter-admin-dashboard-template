@@ -9,6 +9,8 @@ class UserPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const PageHeader(title: 'Users');
+    return const ContentView(
+      child: PageHeader(title: 'User'),
+    );
   }
 }
