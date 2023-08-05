@@ -7,11 +7,13 @@ import 'router.dart';
 
 void main() {
   usePathUrlStrategy();
-  runApp(const MyApp());
+  runApp(const App());
 }
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+class App extends StatelessWidget {
+  const App({super.key});
+
+  static const title = 'Flutter Admin Dashboard';
 
   @override
   Widget build(BuildContext context) {
@@ -20,7 +22,7 @@ class MyApp extends StatelessWidget {
       dark: AppTheme.dark,
       initial: AdaptiveThemeMode.system,
       builder: (theme, darkTheme) => MaterialApp.router(
-        title: 'Flutter Admin Dashboard',
+        title: title,
         routerConfig: router,
         theme: theme,
         darkTheme: darkTheme,

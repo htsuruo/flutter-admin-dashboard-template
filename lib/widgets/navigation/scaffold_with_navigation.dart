@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_admin_dashboard_template/main.dart';
 import 'package:go_router/go_router.dart';
 
 import 'navigation_app_bar.dart';
@@ -77,7 +78,7 @@ class _ScaffoldWithDrawer extends StatelessWidget {
               margin: EdgeInsets.zero,
               child: Center(
                 child: Text(
-                  'Drawer Header',
+                  App.title,
                   style: theme.textTheme.bodyMedium!
                       .copyWith(fontWeight: FontWeight.w600),
                 ),
