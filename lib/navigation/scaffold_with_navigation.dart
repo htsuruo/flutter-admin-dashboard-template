@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_admin_dashboard_template/widgets/widgets.dart';
 import 'package:go_router/go_router.dart';
 
 import 'navigation_item.dart';
@@ -46,12 +47,7 @@ class _ScaffoldWithNavigationRail extends StatelessWidget {
         centerTitle: false,
         elevation: 1,
         actions: [
-          IconButton(
-            icon: const Icon(Icons.mode_night),
-            onPressed: () {
-              // TODO(tsuruoka): モード切り替え
-            },
-          ),
+          const ThemeModeIconButton(),
           IconButton(
             icon: const Icon(Icons.settings),
             onPressed: () {
