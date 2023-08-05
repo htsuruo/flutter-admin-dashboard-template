@@ -13,14 +13,22 @@ class NavigationAppBar extends StatelessWidget implements PreferredSizeWidget {
       centerTitle: false,
       elevation: 1,
       actions: [
-        const Gap(8),
         const Text('htsuruo'),
-        IconButton(
-          icon: const Icon(Icons.account_circle_outlined),
-          onPressed: () {
-            // TODO(tsuruoka): なにかしらのアクション
-          },
+        Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 8),
+          child: PopupMenuButton<void>(
+            itemBuilder: (context) => [
+              PopupMenuItem(
+                child: const Text('Sign out'),
+                onTap: () {
+                  // Sign out logic
+                },
+              ),
+            ],
+            child: const Icon(Icons.account_circle_outlined),
+          ),
         ),
+        const Gap(8),
       ],
     );
   }
