@@ -38,15 +38,13 @@ class ThemeModeButton extends StatelessWidget {
           icon: Icon(iconData),
           onPressed: action,
         ),
-      _Variant.outlined => SelectionContainer.disabled(
-          child: OutlinedButton.icon(
-            onPressed: action,
-            icon: Icon(iconData),
-            label: Text(actionLabel),
-            style: OutlinedButton.styleFrom(
-              side: BorderSide(
-                color: colorScheme.primary.withOpacity(0.5),
-              ),
+      _Variant.outlined => OutlinedButton.icon(
+          onPressed: action,
+          icon: Icon(iconData),
+          label: Text(actionLabel),
+          style: OutlinedButton.styleFrom(
+            side: BorderSide(
+              color: colorScheme.primary.withOpacity(0.5),
             ),
           ),
         )

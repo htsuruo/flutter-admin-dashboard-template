@@ -13,7 +13,9 @@ class NavigationAppBar extends StatelessWidget implements PreferredSizeWidget {
       centerTitle: false,
       elevation: 4,
       actions: [
-        const Text('htsuruo'),
+        const SelectionArea(
+          child: Text('htsuruo'),
+        ),
         Padding(
           padding: const EdgeInsets.symmetric(horizontal: 8),
           child: PopupMenuButton<void>(
