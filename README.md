@@ -11,6 +11,14 @@ This is an admin dashboard template for Flutter Web.
 - Declarative routing by using [go_router_builder](https://pub.dev/packages/go_router_builder)
 - Responsive layout
 
+| Light | Dark |
+| --- | --- |
+| ![](./screenshot/desktop.png) | ![](./screenshot/desktop-dark.png) |
+
+| Tablet | Drawer | Mobile |
+| --- | --- | --- |
+| ![](./screenshot/ipad.png) | ![](./screenshot/drawer.png) | ![](./screenshot/mobile.png) |
+
 ## Usage
 
 This is a template repository. You can create new your repository by `Use this template` > `create a new repository` as following capture.
