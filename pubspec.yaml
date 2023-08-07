@@ -8,7 +8,8 @@ environment:
 
 dependencies:
   adaptive_theme:
-  collection: ^1.17.1
+  collection:
+  cupertino_icons:
   flutter:
     sdk: flutter
   flutter_web_plugins:

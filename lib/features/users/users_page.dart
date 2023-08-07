@@ -19,10 +19,10 @@ class UsersPage extends StatelessWidget {
           const Gap(16),
           Expanded(
             child: Card(
+              clipBehavior: Clip.antiAlias,
               child: ListView.separated(
                 itemCount: dummyUsers.length,
-                padding: const EdgeInsets.all(16),
-                separatorBuilder: (context, _) => const Divider(),
+                separatorBuilder: (context, index) => const Divider(),
                 itemBuilder: (context, index) {
                   final user = dummyUsers[index];
                   return ListTile(
