@@ -20,7 +20,6 @@ class PageHeader extends StatelessWidget {
           ),
         ),
         Text(description)
-        // const RouterLocationLabel(),
       ],
     );
   }
