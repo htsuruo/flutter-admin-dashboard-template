@@ -11,7 +11,6 @@ class NavigationTitle extends StatelessWidget {
     final theme = Theme.of(context);
     // SelectionAreaの影響でポインター表示にならないのでdisabledで例外対応
     // ref. https://github.com/flutter/flutter/issues/104595#issuecomment-1378549493
-    // TODO(tsuruoka): 不要になったので消す
     return MouseRegion(
       cursor: SystemMouseCursors.click,
       child: Visibility(
