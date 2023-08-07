@@ -19,6 +19,7 @@ dependencies:
   google_fonts:
   intersperse:
   recase:
+  responsive_framework:
   simple_logger:
 
 dev_dependencies:

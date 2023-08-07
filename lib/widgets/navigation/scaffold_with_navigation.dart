@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_admin_dashboard_template/main.dart';
 import 'package:flutter_admin_dashboard_template/widgets/widgets.dart';
 import 'package:go_router/go_router.dart';
+import 'package:responsive_framework/responsive_framework.dart';
 
 class ScaffoldWithNavigation extends StatelessWidget {
   const ScaffoldWithNavigation({
@@ -13,16 +14,11 @@ class ScaffoldWithNavigation extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return LayoutBuilder(
-      builder: (context, constraints) {
-        switch (constraints.maxWidth) {
-          case < 960:
-            return _ScaffoldWithDrawer(navigationShell);
-          default:
-            return _ScaffoldWithNavigationRail(navigationShell);
-        }
-      },
-    );
+    final breakpoint = ResponsiveBreakpoints.of(context).breakpoint;
+    return switch (breakpoint.name) {
+      MOBILE || TABLET => _ScaffoldWithDrawer(navigationShell),
+      (_) => _ScaffoldWithNavigationRail(navigationShell),
+    };
   }
 }
 
