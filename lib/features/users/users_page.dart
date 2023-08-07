@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_admin_dashboard_template/features/users/dummy_users.dart';
+import 'package:flutter_admin_dashboard_template/router.dart';
 import 'package:gap/gap.dart';
 
 import '../../widgets/widgets.dart';
@@ -37,7 +38,7 @@ class UsersPage extends StatelessWidget {
                     ),
                     trailing: const Icon(Icons.navigate_next_outlined),
                     onTap: () {
-                      // TODO(tsuruoka): 実装する
+                      UserPageRoute(userId: user.userId).go(context);
                     },
                   );
                 },

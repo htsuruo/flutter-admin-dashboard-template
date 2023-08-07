@@ -1,4 +1,4 @@
-import 'package:flutter_admin_dashboard_template/features/users/dummy_user.dart';
+import 'package:flutter_admin_dashboard_template/features/users/user.dart';
 
 List<User> dummyUsers = _json.map((json) {
   if (json

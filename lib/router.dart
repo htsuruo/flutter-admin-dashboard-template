@@ -1,8 +1,10 @@
+import 'package:collection/collection.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
 import 'features/dashboard/dashbord_page.dart';
+import 'features/users/dummy_users.dart';
 import 'features/users/user_page.dart';
 import 'features/users/users_page.dart';
 import 'widgets/widgets.dart';
@@ -80,6 +82,7 @@ class UserPageRoute extends GoRouteData {
 
   @override
   Widget build(BuildContext context, GoRouterState state) {
-    return UserPage(userId: userId);
+    final user = dummyUsers.firstWhereOrNull((e) => e.userId == userId);
+    return UserPage(user: user!);
   }
 }
