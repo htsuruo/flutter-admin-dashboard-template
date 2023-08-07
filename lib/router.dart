@@ -1,6 +1,7 @@
 import 'package:collection/collection.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_admin_dashboard_template/features/users/user_not_found_page.dart';
 import 'package:go_router/go_router.dart';
 
 import 'features/dashboard/dashbord_page.dart';
@@ -83,6 +84,8 @@ class UserPageRoute extends GoRouteData {
   @override
   Widget build(BuildContext context, GoRouterState state) {
     final user = dummyUsers.firstWhereOrNull((e) => e.userId == userId);
-    return UserPage(user: user!);
+    return user == null
+        ? UserNotFoundPage(userId: userId)
+        : UserPage(user: user);
   }
 }
