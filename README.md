@@ -1,6 +1,6 @@
 # Flutter Admin Dashboard Template
 
-This is an admin dashboard template for Flutter Web.
+This is an admin dashboard template for Flutter.
 
 **[View Demo](https://flutter-admin-dashboard-d5aeb.web.app/)**
 
