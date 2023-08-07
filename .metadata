@@ -18,9 +18,6 @@ migration:
     - platform: macos
       create_revision: f468f3366c26a5092eb964a230ce7892fda8f2f8
       base_revision: f468f3366c26a5092eb964a230ce7892fda8f2f8
-    - platform: web
-      create_revision: f468f3366c26a5092eb964a230ce7892fda8f2f8
-      base_revision: f468f3366c26a5092eb964a230ce7892fda8f2f8
 
   # User provided section
 
