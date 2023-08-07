@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_admin_dashboard_template/features/users/dummy_users.dart';
 import 'package:gap/gap.dart';
 
 import '../../widgets/widgets.dart';
@@ -8,6 +9,8 @@ class UsersPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final theme = Theme.of(context);
+    final colorScheme = theme.colorScheme;
     return ContentView(
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -17,15 +20,25 @@ class UsersPage extends StatelessWidget {
           Expanded(
             child: Card(
               child: ListView.separated(
-                itemCount: 50,
+                itemCount: dummyUsers.length,
                 padding: const EdgeInsets.all(16),
                 separatorBuilder: (context, _) => const Divider(),
                 itemBuilder: (context, index) {
+                  final user = dummyUsers[index];
                   return ListTile(
-                    title: Text('$index'),
-                    subtitle: const Text('text'),
+                    title: Text(
+                      user.name,
+                      style: theme.textTheme.bodyMedium!
+                          .copyWith(fontWeight: FontWeight.w600),
+                    ),
+                    subtitle: Text(
+                      user.role,
+                      style: theme.textTheme.labelMedium,
+                    ),
                     trailing: const Icon(Icons.navigate_next_outlined),
-                    onTap: () {},
+                    onTap: () {
+                      // TODO(tsuruoka): 実装する
+                    },
                   );
                 },
               ),

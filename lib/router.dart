@@ -3,8 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
 import 'features/dashboard/dashbord_page.dart';
-import 'features/users/user.dart';
-import 'features/users/users.dart';
+import 'features/users/user_page.dart';
+import 'features/users/users_page.dart';
 import 'widgets/widgets.dart';
 
 part 'router.g.dart';
