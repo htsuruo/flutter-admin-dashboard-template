@@ -15,7 +15,10 @@ class UsersPage extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          const PageHeader(title: 'Users'),
+          const PageHeader(
+            title: 'Users',
+            description: 'List of users who can sign in to this dashboard.',
+          ),
           const Gap(16),
           Expanded(
             child: Card(

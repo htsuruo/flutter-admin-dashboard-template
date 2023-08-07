@@ -19,7 +19,10 @@ class DashBoardPage extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          const PageHeader(title: 'Dashboard'),
+          const PageHeader(
+            title: 'Dashboard',
+            description: 'A summary of key data and insights on your project.',
+          ),
           const Gap(16),
           Row(
             children: summaryCards

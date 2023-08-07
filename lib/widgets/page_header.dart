@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 
 class PageHeader extends StatelessWidget {
-  const PageHeader({super.key, required this.title});
+  const PageHeader({super.key, required this.title, required this.description});
 
   final String title;
+  final String description;
 
   @override
   Widget build(BuildContext context) {
@@ -18,8 +19,8 @@ class PageHeader extends StatelessWidget {
             fontWeight: FontWeight.w700,
           ),
         ),
-        // TODO(tsuruoka): 適切な表示にかえる
-        const Text('aaa > bbb')
+        Text(description)
+        // const RouterLocationLabel(),
       ],
     );
   }
