@@ -4,6 +4,11 @@ This is an admin dashboard template for Flutter.
 
 **[View Demo](https://flutter-admin-dashboard-d5aeb.web.app/)**
 
+
+| Demo |
+| --- |
+| ![output4](https://github.com/htsuruo/flutter-admin-dashboard-template/assets/12729025/1715ef3b-6436-44d1-a165-8171b2c8edbc) |
+
 ## Features
 
 - Material Design 3
