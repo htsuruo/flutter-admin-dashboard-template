@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 import 'package:intersperse/intersperse.dart';
 import 'package:responsive_framework/responsive_framework.dart';
+import 'package:two_dimensional_scrollables/two_dimensional_scrollables.dart';
 
 import '../../widgets/widgets.dart';
 
@@ -35,7 +36,57 @@ class DashBoardPage extends StatelessWidget {
                   .intersperse(const Gap(16))
                   .toList(),
             ),
+          const Gap(16),
+          const Expanded(
+            child: _TableView(),
+          ),
         ],
+      ),
+    );
+  }
+}
+
+class _TableView extends StatelessWidget {
+  const _TableView();
+
+  @override
+  Widget build(BuildContext context) {
+    final theme = Theme.of(context);
+    final colorScheme = theme.colorScheme;
+    const count = 50;
+    final decoration = TableSpanDecoration(
+      border: TableSpanBorder(
+        trailing: BorderSide(color: theme.dividerColor),
+      ),
+    );
+
+    return Card(
+      clipBehavior: Clip.antiAlias,
+      child: TableView.builder(
+        columnCount: count,
+        rowCount: count,
+        pinnedRowCount: 1,
+        pinnedColumnCount: 1,
+        columnBuilder: (index) {
+          return TableSpan(
+            foregroundDecoration: index == 0 ? decoration : null,
+            extent: const FixedTableSpanExtent(100),
+          );
+        },
+        rowBuilder: (index) {
+          return TableSpan(
+            foregroundDecoration: index == 0 ? decoration : null,
+            extent: const FixedTableSpanExtent(50),
+          );
+        },
+        cellBuilder: (context, vicinity) => ColoredBox(
+          color: vicinity.xIndex == 0 || vicinity.yIndex == 0
+              ? Colors.transparent
+              : colorScheme.background,
+          child: Center(
+            child: Text('Tile c: ${vicinity.column}, r: ${vicinity.row}'),
+          ),
+        ),
       ),
     );
   }
