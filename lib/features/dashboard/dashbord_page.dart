@@ -65,7 +65,7 @@ class _TableView extends StatelessWidget {
     return Card(
       clipBehavior: Clip.antiAlias,
       child: TableView.builder(
-        columnCount: inventoryItemCount,
+        columnCount: Inventory.itemCount,
         rowCount: inventories.length,
         pinnedRowCount: 1,
         pinnedColumnCount: 1,

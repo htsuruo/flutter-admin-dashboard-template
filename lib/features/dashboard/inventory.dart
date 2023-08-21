@@ -25,7 +25,7 @@ class Inventory {
   final String productWeight;
   final String partnershipProgramInfo;
   final String storageLocation;
-}
 
-// クラスのプロパティ名をカウントする方法があれば知りたい
-const inventoryItemCount = 12;
+  // クラスのプロパティ名をカウントする方法があれば知りたい
+  static const itemCount = 12;
+}
