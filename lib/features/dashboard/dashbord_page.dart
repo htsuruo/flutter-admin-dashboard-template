@@ -72,7 +72,8 @@ class _TableView extends StatelessWidget {
         columnBuilder: (index) {
           return TableSpan(
             foregroundDecoration: index == 0 ? decoration : null,
-            extent: const FixedTableSpanExtent(120),
+            // Viewportに対して8分割した幅に調整してくれる
+            extent: const FractionalTableSpanExtent(1 / 8),
           );
         },
         rowBuilder: (index) {
