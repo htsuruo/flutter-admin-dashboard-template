@@ -53,7 +53,6 @@ class _TableView extends StatelessWidget {
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
     final colorScheme = theme.colorScheme;
-    const count = 50;
     final decoration = TableSpanDecoration(
       border: TableSpanBorder(
         trailing: BorderSide(color: theme.dividerColor),
@@ -63,8 +62,8 @@ class _TableView extends StatelessWidget {
     return Card(
       clipBehavior: Clip.antiAlias,
       child: TableView.builder(
-        columnCount: count,
-        rowCount: count,
+        columnCount: 20,
+        rowCount: 50,
         pinnedRowCount: 1,
         pinnedColumnCount: 1,
         columnBuilder: (index) {
@@ -79,14 +78,26 @@ class _TableView extends StatelessWidget {
             extent: const FixedTableSpanExtent(50),
           );
         },
-        cellBuilder: (context, vicinity) => ColoredBox(
-          color: vicinity.xIndex == 0 || vicinity.yIndex == 0
-              ? Colors.transparent
-              : colorScheme.background,
-          child: Center(
-            child: Text('Tile c: ${vicinity.column}, r: ${vicinity.row}'),
-          ),
-        ),
+        cellBuilder: (context, vicinity) {
+          final titleCell = vicinity.xIndex == 0 && vicinity.yIndex == 0;
+          final isStickyHeader = vicinity.xIndex == 0 || vicinity.yIndex == 0;
+          return titleCell
+              ? const SizedBox.shrink()
+              : ColoredBox(
+                  color: isStickyHeader
+                      ? Colors.transparent
+                      : colorScheme.background,
+                  child: Center(
+                    child: Text(
+                      'Tile c: ${vicinity.column}, r: ${vicinity.row}',
+                      style: TextStyle(
+                        fontWeight: isStickyHeader ? FontWeight.w600 : null,
+                        color: isStickyHeader ? null : colorScheme.outline,
+                      ),
+                    ),
+                  ),
+                );
+        },
       ),
     );
   }
