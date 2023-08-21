@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_admin_dashboard_template/features/dashboard/dummy_inventories.dart';
+import 'package:flutter_admin_dashboard_template/features/dashboard/inventory.dart';
 import 'package:gap/gap.dart';
 import 'package:intersperse/intersperse.dart';
 import 'package:responsive_framework/responsive_framework.dart';
@@ -58,18 +60,19 @@ class _TableView extends StatelessWidget {
         trailing: BorderSide(color: theme.dividerColor),
       ),
     );
+    final inventories = dummyInventories;
 
     return Card(
       clipBehavior: Clip.antiAlias,
       child: TableView.builder(
-        columnCount: 20,
-        rowCount: 50,
+        columnCount: inventoryItemCount,
+        rowCount: inventories.length,
         pinnedRowCount: 1,
         pinnedColumnCount: 1,
         columnBuilder: (index) {
           return TableSpan(
             foregroundDecoration: index == 0 ? decoration : null,
-            extent: const FixedTableSpanExtent(100),
+            extent: const FixedTableSpanExtent(120),
           );
         },
         rowBuilder: (index) {
@@ -79,24 +82,81 @@ class _TableView extends StatelessWidget {
           );
         },
         cellBuilder: (context, vicinity) {
-          final titleCell = vicinity.xIndex == 0 && vicinity.yIndex == 0;
           final isStickyHeader = vicinity.xIndex == 0 || vicinity.yIndex == 0;
-          return titleCell
-              ? const SizedBox.shrink()
-              : ColoredBox(
-                  color: isStickyHeader
-                      ? Colors.transparent
-                      : colorScheme.background,
-                  child: Center(
-                    child: Text(
-                      'Tile c: ${vicinity.column}, r: ${vicinity.row}',
-                      style: TextStyle(
-                        fontWeight: isStickyHeader ? FontWeight.w600 : null,
-                        color: isStickyHeader ? null : colorScheme.outline,
-                      ),
+          var label = '';
+          if (vicinity.yIndex == 0) {
+            switch (vicinity.xIndex) {
+              case 0:
+                label = 'ID';
+              case 1:
+                label = 'Category';
+              case 2:
+                label = 'Brand';
+              case 3:
+                label = 'Supplier';
+              case 4:
+                label = 'Minimum Stock';
+              case 5:
+                label = 'Update Date';
+              case 6:
+                label = 'Tax Rate';
+              case 7:
+                label = 'Notes';
+              case 8:
+                label = 'Product Size';
+              case 9:
+                label = 'Product Weight';
+              case 10:
+                label = 'Partnership Info';
+              case 11:
+                label = 'Location';
+            }
+          } else {
+            final inventory = inventories[vicinity.yIndex - 1];
+            switch (vicinity.xIndex) {
+              case 0:
+                label = inventory.inventoryId;
+              case 1:
+                label = inventory.category;
+              case 2:
+                label = inventory.brand;
+              case 3:
+                label = inventory.supplier;
+              case 4:
+                label = inventory.minimumStock.toString();
+              case 5:
+                label = inventory.updateDate;
+              case 6:
+                label = inventory.taxRate.toString();
+              case 7:
+                label = inventory.notes;
+              case 8:
+                label = inventory.productSize;
+              case 9:
+                label = inventory.productWeight;
+              case 10:
+                label = inventory.partnershipProgramInfo;
+              case 11:
+                label = inventory.storageLocation;
+            }
+          }
+          return ColoredBox(
+            color: isStickyHeader ? Colors.transparent : colorScheme.background,
+            child: Center(
+              child: FittedBox(
+                child: Padding(
+                  padding: const EdgeInsets.all(8),
+                  child: Text(
+                    label,
+                    style: TextStyle(
+                      fontWeight: isStickyHeader ? FontWeight.w600 : null,
+                      color: isStickyHeader ? null : colorScheme.outline,
                     ),
                   ),
-                );
+                ),
+              ),
+            ),
+          );
         },
       ),
     );
