@@ -19,7 +19,7 @@ class PageHeader extends StatelessWidget {
             fontWeight: FontWeight.w700,
           ),
         ),
-        Text(description)
+        Text(description),
       ],
     );
   }

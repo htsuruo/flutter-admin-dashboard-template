@@ -26,7 +26,7 @@ final router = GoRouter(
       routes: [
         TypedGoRoute<DashboardRoute>(
           path: routerInitialLocation,
-        )
+        ),
       ],
     ),
     TypedStatefulShellBranch(
@@ -36,9 +36,9 @@ final router = GoRouter(
           routes: [
             TypedGoRoute<UserPageRoute>(
               path: ':userId',
-            )
+            ),
           ],
-        )
+        ),
       ],
     ),
   ],

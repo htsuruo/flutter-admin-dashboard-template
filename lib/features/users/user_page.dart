@@ -34,7 +34,7 @@ class UserPage extends StatelessWidget {
             onPressed: () {
               context.pop();
             },
-          )
+          ),
         ],
       ),
     );

@@ -34,7 +34,7 @@ class DashBoardPage extends StatelessWidget {
                   .map<Widget>((card) => Expanded(child: card))
                   .intersperse(const Gap(16))
                   .toList(),
-            )
+            ),
         ],
       ),
     );
