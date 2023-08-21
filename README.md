@@ -4,7 +4,6 @@ This is an admin dashboard template for Flutter.
 
 **[View Demo](https://flutter-admin-dashboard-d5aeb.web.app/)**
 
-
 | Demo |
 | --- |
 | ![output4](https://github.com/htsuruo/flutter-admin-dashboard-template/assets/12729025/1715ef3b-6436-44d1-a165-8171b2c8edbc) |
@@ -12,9 +11,10 @@ This is an admin dashboard template for Flutter.
 ## Features
 
 - Material Design 3
-- Light/Dark mode
-- Declarative routing by using [go_router_builder](https://pub.dev/packages/go_router_builder)
-- Responsive layout
+- Light/Dark mode - [adaptive_theme](https://pub.dev/packages/adaptive_theme)
+- Declarative routing - [go_router_builder](https://pub.dev/packages/go_router_builder)
+- Responsive layout - [responsive_framework](https://pub.dev/packages/responsive_framework)
+- Two dimensional table - [two_dimensional_scrollables](https://pub.dev/packages/two_dimensional_scrollables)
 
 | Light | Dark |
 | --- | --- |
