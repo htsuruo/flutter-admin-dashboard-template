@@ -21,6 +21,7 @@ dependencies:
   recase:
   responsive_framework:
   simple_logger:
+  two_dimensional_scrollables:
 
 dev_dependencies:
   build_runner:
