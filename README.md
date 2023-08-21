@@ -22,7 +22,7 @@ This is an admin dashboard template for Flutter.
 
 | Tablet | Drawer | Mobile |
 | --- | --- | --- |
-| ![](./screenshot/ipad.png) | ![](./screenshot/drawer.png) | ![](./screenshot/mobile.png) |
+| ![](./screenshot/tablet.png) | ![](./screenshot/drawer.png) | ![](./screenshot/mobile.png) |
 
 ## Usage
 
