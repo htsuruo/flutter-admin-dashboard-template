@@ -13,9 +13,7 @@ class NavigationAppBar extends StatelessWidget implements PreferredSizeWidget {
       centerTitle: false,
       elevation: 4,
       actions: [
-        const SelectionArea(
-          child: Text('anonymous'),
-        ),
+        const Text('anonymous'),
         Padding(
           padding: const EdgeInsets.symmetric(horizontal: 8),
           child: PopupMenuButton<void>(

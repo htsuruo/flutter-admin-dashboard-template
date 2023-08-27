@@ -52,8 +52,10 @@ class ShellRouteData extends StatefulShellRouteData {
     GoRouterState state,
     StatefulNavigationShell navigationShell,
   ) {
-    return ScaffoldWithNavigation(
-      navigationShell: navigationShell,
+    return SelectionArea(
+      child: ScaffoldWithNavigation(
+        navigationShell: navigationShell,
+      ),
     );
   }
 }

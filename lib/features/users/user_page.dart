@@ -24,9 +24,7 @@ class UserPage extends StatelessWidget {
             ),
           ),
           Text('role: ${user.role}'),
-          SelectionArea(
-            child: Text('userId: ${user.userId}'),
-          ),
+          Text('userId: ${user.userId}'),
           const Gap(16),
           ElevatedButton.icon(
             icon: const Icon(Icons.navigate_before),
