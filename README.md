@@ -10,7 +10,7 @@ This is an admin dashboard template for Flutter.
 
 ## Features
 
-- Material Design 3
+- Material 3
 - Light/Dark mode - [adaptive_theme](https://pub.dev/packages/adaptive_theme)
 - Declarative routing - [go_router_builder](https://pub.dev/packages/go_router_builder)
 - Responsive layout - [responsive_framework](https://pub.dev/packages/responsive_framework)
