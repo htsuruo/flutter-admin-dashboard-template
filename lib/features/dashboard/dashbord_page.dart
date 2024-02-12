@@ -141,17 +141,20 @@ class _TableView extends StatelessWidget {
                 label = inventory.storageLocation;
             }
           }
-          return ColoredBox(
-            color: isStickyHeader ? Colors.transparent : colorScheme.background,
-            child: Center(
-              child: FittedBox(
-                child: Padding(
-                  padding: const EdgeInsets.all(8),
-                  child: Text(
-                    label,
-                    style: TextStyle(
-                      fontWeight: isStickyHeader ? FontWeight.w600 : null,
-                      color: isStickyHeader ? null : colorScheme.outline,
+          return TableViewCell(
+            child: ColoredBox(
+              color:
+                  isStickyHeader ? Colors.transparent : colorScheme.background,
+              child: Center(
+                child: FittedBox(
+                  child: Padding(
+                    padding: const EdgeInsets.all(8),
+                    child: Text(
+                      label,
+                      style: TextStyle(
+                        fontWeight: isStickyHeader ? FontWeight.w600 : null,
+                        color: isStickyHeader ? null : colorScheme.outline,
+                      ),
                     ),
                   ),
                 ),
