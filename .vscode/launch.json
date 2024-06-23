@@ -5,6 +5,14 @@
       "name": "flutter-admin-dashboard-template",
       "request": "launch",
       "type": "dart"
+    },
+    {
+      "name": "wasm:flutter-admin-dashboard-template",
+      "request": "launch",
+      "type": "dart",
+      "args": [
+        "--wasm"
+      ]
     }
   ]
 }
