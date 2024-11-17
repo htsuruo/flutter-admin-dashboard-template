@@ -12,12 +12,14 @@ import 'widgets/widgets.dart';
 
 part 'router.g.dart';
 
+final _rootNavigatorKey = GlobalKey<NavigatorState>(debugLabel: 'root');
 const routerInitialLocation = '/';
 
 final router = GoRouter(
   routes: $appRoutes,
   debugLogDiagnostics: kDebugMode,
   initialLocation: routerInitialLocation,
+  navigatorKey: _rootNavigatorKey,
 );
 
 @TypedStatefulShellRoute<ShellRouteData>(
