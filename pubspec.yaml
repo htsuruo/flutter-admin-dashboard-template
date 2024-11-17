@@ -1,10 +1,10 @@
 name: flutter_admin_dashboard_template
-description: A new Flutter project.
+description: This is an admin dashboard template for Flutter.
 publish_to: 'none'
 version: 1.0.0+1
 
 environment:
-  sdk: '>=3.0.6 <4.0.0'
+  sdk: ^3.5.0
 
 dependencies:
   adaptive_theme:

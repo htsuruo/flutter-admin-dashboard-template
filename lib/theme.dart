@@ -23,6 +23,7 @@ class AppTheme {
       textTheme: themeData.textTheme.apply(
         fontFamily: GoogleFonts.poppins().fontFamily,
       ),
+      appBarTheme: const AppBarTheme(scrolledUnderElevation: 0),
       dividerTheme: const DividerThemeData(space: 0),
       bottomNavigationBarTheme: const BottomNavigationBarThemeData(
         selectedLabelStyle: TextStyle(
