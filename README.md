@@ -8,6 +8,8 @@ This is an admin dashboard template for Flutter.
 | --- |
 | ![output4](https://github.com/htsuruo/flutter-admin-dashboard-template/assets/12729025/1715ef3b-6436-44d1-a165-8171b2c8edbc) |
 
+For more details, DeepWiki is [here](https://deepwiki.com/htsuruo/flutter-admin-dashboard-template/1-overview).
+
 ## Features
 
 - Material 3
